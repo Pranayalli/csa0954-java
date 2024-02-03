@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Vowelsandconsonants {
+
+	public static void main(String[] args) {
+		String str;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter string");
+		str=sc.nextLine();
+		int len=str.length();
+		int v=0;
+		int c=0;
+		char vow[]=new char[len];
+		char cons[]=new char[len];
+		char arr[]=new char[len];
+		for(int i=0;i<=len-1;i++) {
+			arr[i]=str.charAt(i);
+			if(arr[i]=='a'||arr[i]=='e'||arr[i]=='i'||arr[i]=='o'||arr[i]=='u') {
+				vow[v]=arr[i];
+				v++;
+			}
+			else {
+				cons[c]=arr[i];
+				c++;
+			}
+		}
+		System.out.println("no of vowels"+v);
+		System.out.println("no of consonants"+c);
+		System.out.println("vowels are");
+		for(int i=0;i<v;i++) {
+			System.out.print(vow[i]);
+		}
+		System.out.println("consonants are");
+		for(int i=0;i<c;i++) {
+			System.out.print(cons[i]);
+		}
+		
+		
+		
+
+	}
